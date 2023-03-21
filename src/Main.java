@@ -16,9 +16,7 @@ public class Main {
         player = new Hero( name ,100, 100, 25, 0, 25);
         while (stop != true){
             Main.Menu();
-
         }
-
     }
 
     public static void Menu(){
@@ -54,9 +52,6 @@ public class Main {
         if (way == 3) {
             stop = true;
             System.out.println("Выход");
-
-
-
         }
     }
 
@@ -76,7 +71,6 @@ public class Main {
                     System.out.println("Недостаточно золота");
                 }
                 Main.Menu();
-
             }
             else {
                 System.out.println("Уходим");
@@ -86,8 +80,6 @@ public class Main {
     }
 
     static class GameThread extends Thread{
-
-
 
         GameThread(String name){
             super(name);
@@ -129,7 +121,6 @@ public class Main {
                     System.out.print("Далее:\n 1. Продолжить\n 2. Меню\n");
                     Scanner in = new Scanner(System.in);
 
-                    //System.out.println(in.nextInt());
                     if (in.nextInt() == 2) {
                         Main.Menu();
                     }
@@ -140,12 +131,8 @@ public class Main {
                     System.out.println("Вы мертвы");
                     stop = true;
                 }
-
-
             }
         }
-
-
     }
 }
 class Unit {
@@ -178,7 +165,6 @@ class Unit {
         else coef = 0;
         return coef * power;
     }
-
 }
 class Hero extends Unit{
     public Hero (String name, int hp,int gold,int dex,int exp,int power){
@@ -194,5 +180,4 @@ class Skeleton extends Unit{
     public Skeleton (String name, int hp,int gold,int dex,int exp,int power){
         super(name, hp, gold, dex, exp, power);
     }
-
 }
